@@ -1,0 +1,12 @@
+
+#Eg
+#.idea
+#/FaceAge/Models
+#/FaceAge/DLDL-v2-PyTorch/data/ch16_train/*.zip
+
+
+#pth
+*.pth
+
+#data
+/0_Warmup/data/*
