@@ -50,12 +50,12 @@ if __name__=="__main__":
 
     trainset = torchvision.datasets.CIFAR100(root='./data', train=True,
                                             download=True, transform=transform)
-    trainloader = torch.utils.data.DataLoader(trainset, batch_size=4,
+    trainloader = torch.utils.data.DataLoader(trainset, batch_size=64,
                                               shuffle=True, num_workers=2)
 
     testset = torchvision.datasets.CIFAR100(root='./data', train=False,
                                            download=True, transform=transform)
-    testloader = torch.utils.data.DataLoader(testset, batch_size=4,
+    testloader = torch.utils.data.DataLoader(testset, batch_size=64,
                                              shuffle=False, num_workers=2)
 
     classes = ('plane', 'car', 'bird', 'cat',
@@ -74,10 +74,12 @@ if __name__=="__main__":
     # Train
     # =========================
     if tarin_or_test=="Train":
+        net.train()
         for epoch in range(max_epoches):  # loop over the dataset multiple times
-
+            print("Epoch=",epoch)
             running_loss = 0.0
             for i, data in enumerate(trainloader, 0):
+                print("i=",i)
                 # get the inputs; data is a list of [inputs, labels]
                 inputs, labels = data[0].to(device), data[1].to(device)
 
