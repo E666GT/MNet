@@ -1,3 +1,9 @@
+# Intro
+Author： Chen Y.W  
+Date: 9th.Mar.2020  
+Progress: Experimental  
+Abstract: MNet, the experimental distributed neuron networks.  
+
 # Before Start
 ## Warm Up Exps
 [Build a simple CIFAR-10 Net](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html)
