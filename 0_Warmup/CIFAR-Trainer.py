@@ -67,8 +67,8 @@ if __name__=="__main__":
     net=para_net
     net.to(device)
     criterion = nn.CrossEntropyLoss()
-    # optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
-    optimizer = optim.RMSprop(net.parameters(), lr=0.001, alpha=0.99, eps=1e-08, weight_decay=0.9, momentum=0.9, centered=False)
+    optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+    # optimizer = optim.RMSprop(net.parameters(), lr=0.001, alpha=0.99, eps=1e-08, weight_decay=0.9, momentum=0.9, centered=False)
 
     # =========================
     # Train
