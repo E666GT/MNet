@@ -79,7 +79,7 @@ if __name__=="__main__":
             print("Epoch=",epoch)
             running_loss = 0.0
             for i, data in enumerate(trainloader, 0):
-                print("i=",i)
+                # print("i=",i)
                 # get the inputs; data is a list of [inputs, labels]
                 inputs, labels = data[0].to(device), data[1].to(device)
 
@@ -94,9 +94,10 @@ if __name__=="__main__":
 
                 # print statistics
                 running_loss += loss.item()
+
                 if i % 50 == 49:  # print every 2000 mini-batches
                     print('[%d, %5d] loss: %.3f' %
-                          (epoch + 1, i + 1, running_loss / 2000))
+                          (epoch + 1, i + 1, running_loss / 50))
                     running_loss = 0.0
 
         print('Finished Training')
